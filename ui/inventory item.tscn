@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://bvbcdob3ghsng"]
-
-[node name="Label" type="Label"]
-text = "Item Name"
-vertical_alignment = 1
