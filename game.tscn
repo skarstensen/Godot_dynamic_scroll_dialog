@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cstmar211pvqk"]
+
+[ext_resource type="Script" path="res://scripts/Game.gd" id="1_dlrd2"]
+[ext_resource type="Script" path="res://scripts/ui/ChoicesDialog.gd" id="4_um3na"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0j8i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_un0en"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_717vj"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[node name="Game" type="Node"]
+script = ExtResource("1_dlrd2")
+
+[node name="Choices Dialog" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -501.0
+offset_top = -169.0
+offset_right = 502.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_um3na")
+
+[node name="MarginContainer" type="MarginContainer" parent="Choices Dialog"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Choices" type="VBoxContainer" parent="Choices Dialog/MarginContainer"]
+layout_mode = 2
+
+[node name="Choice Button" type="Button" parent="Choices Dialog/MarginContainer/Choices"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q0j8i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_un0en")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_717vj")
+text = "Choice"
+alignment = 0
